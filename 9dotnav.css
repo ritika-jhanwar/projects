@@ -1,0 +1,65 @@
+:root{
+    --background: rgba(19, 19, 29, 0.94);
+}
+html,body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color: var(--background);
+    height: 100vh;
+    width: 100vh;
+}
+.small-container{
+    height: 10rem;
+    width: 10rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.box{
+    background-color: aliceblue;
+    height: 2rem;
+    width: 2rem;
+    transition-delay: calc(0.1s * var(--i));
+}
+ion-icon{
+    display: none;
+}
+
+.small-container.active {
+    height: 16rem;
+    width: 16rem;
+}
+
+.small-container.active .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2536;
+    height: 4rem;
+    width: 4rem;
+}
+
+.small-container.active .box ion-icon{
+    display: flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #fff;
+}
+
+.small-container.active .box ion-icon:hover{
+    color: #2dfc52;
+    filter: drop-shadow(0 0 3px #2dfc52) drop-shadow(0 0 6px #2dfc52) drop-shadow(0 0 12px #2dfc52);
+}
+.small-container.active .close{
+    background-color: #2dfc52;
+}
+.small-container.active .close ion-icon{
+    color: #10131c;
+}
